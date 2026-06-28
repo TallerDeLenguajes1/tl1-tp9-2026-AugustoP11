@@ -9,7 +9,7 @@ public class Id3v1Tag
 
     private string album;
 
-    private int anio;
+    private string anio;
 
     private string comentario;
 
@@ -21,13 +21,13 @@ public class Id3v1Tag
 
     public string Album {get => album;}
 
-    public int Anio {get => anio;}
+    public string Anio {get => anio;}
 
     public string Comentario {get => comentario;}
 
     public string Genero {get => genero;}
 
-    public Id3v1Tag(string titulo, string artista, string album, int anio, string comentario, string genero)
+    public Id3v1Tag(string titulo, string artista, string album, string anio, string comentario, string genero)
     {
         this.titulo = titulo;
         this.artista = artista;
