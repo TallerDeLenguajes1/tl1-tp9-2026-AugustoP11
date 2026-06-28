@@ -36,5 +36,11 @@ using (FileStream fs = new FileStream(pathCancion, FileMode.Open))
         comentario = Encoding.GetEncoding("latin1").GetString(buffer, 97, 30).Trim(' ', '\0');
         genero = Encoding.GetEncoding("latin1").GetString(buffer, 127, 1).Trim(' ', '\0');
 
+        Id3v1Tag cancionMP3 = new Id3v1Tag(titulo, artista, album, anio, comentario, genero);
+        Console.WriteLine("________INFORMACIÓN OBTENIDA________");
+        Console.WriteLine($"TÍTULO: {cancionMP3.Titulo}");
+        Console.WriteLine($"ARTISTA: {cancionMP3.Artista}");
+        Console.WriteLine($"ÁLBUM: {cancionMP3.Album}");
+        Console.WriteLine($"AÑO: {cancionMP3.Anio}");
     }
 }
